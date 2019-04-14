@@ -105,8 +105,6 @@ public async Task InvokeAsync(HttpContext context, RequestDelegate next)
 
 Db concurrency is related to a conflict when multiple transactions trying to update the same data in the database at the same time. In the below diagram, if you see that Transaction 1 and Transaction 2 are against the same account, one trying to deposit amount into account and the other system tring to Withdraw amount from the account at the same time. The framework contains two logical layers, one handles the Business Logic and the other handles the Data logic. 
 
-![Db Concurrency Update Exception](https://h9wjxq.dm.files.1drv.com/y4mQaKTurkARMHvgn2Btinv1zGVwyGPEiDN8n2hoiNkj6dqFsrkVRBD1ivMGlyCw_wyS2uIB5acPPZHGGJfYMZHtKJ7_ipf7Ltj--wdVJmQYiZP3tsR7CSEq_JVTz8eoA86pBrmy6aYT6quacE5PReiczk71Q11NUjnGSnbuN_0LuvheU5L2ns0scFeEBy3Szu9IoUq-uvDVUJ2Fagj8Ftlsw?width=921&height=536&cropmode=none)
-
 When a data is read from the DB and when business logic is applied to the data, at this context, there will be three different states for the values relating to the same record.
 
 - **Database values** are the values currently stored in the database.
